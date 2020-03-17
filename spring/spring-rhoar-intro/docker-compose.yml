@@ -1,0 +1,9 @@
+#version: 3.7
+services:
+  postgres:
+    image: openshift/postgresql-92-centos7:latest
+  container_name: my-database
+  environment:
+    - "POSTGRESQL_PASSWORD=secret"
+    - "POSTGRESQL_DATABASE=my_data"
+    - "POSTGRESQL_USER=luke"
